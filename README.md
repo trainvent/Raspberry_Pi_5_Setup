@@ -1,10 +1,6 @@
 # Raspberry_Pi_5_Setup
-Or how to Homecloud!
 
-> [!WARNING]
-> I do not recommend this, Raspberry pi does not have enough processing power to deliver a smooth cloud experience
-
-this is what i need to get my current config running. It consists of Fritzbox-Network, [RaspberryPi5+NVMe Base Projekt](https://www.etsy.com/de-en/listing/1732482582/), strato-domain, nextcloud-aio. I use it to manage almost everything digital: Storage, Email, Conctacts, Calendar, todo-Lists, Passwords and even Office tasks. It runs okay, it has no running costs and will get better in future for sure! An alternative to just having all your information floating out there in hands of google, aws or whom-ever. Feel free to grab and interact!
+this is what i need to get my current config running. It's based on [RaspberryPi5+NVMe Base Projekt](https://www.etsy.com/de-en/listing/1732482582/).
 
 ## Os:
 - PiOs Lite Download with SSH enabled. Continue once you can acess with SSH from your pc.
@@ -34,42 +30,3 @@ then paste
 ```
 Now you can sleep peacefully, even if you have a Raspberry-Server next to you :-).
 
-## Homecloud:
-### inital Setup:
-- make sure my server has a stable connection with a static local Ip-Adress
-- find a Domain. I use Strato currently.
-- create a subdomain with prefix: cloud.<domainname>. then find your homenetworks public-ip and set the A record.  
-- follow the provided guide with no extra features: https://github.com/nextcloud/all-in-one
-- make sure it's acessible from outside your LAN.
-- If the public Ip changes regularly, get flexible and set a DynDNS instead of A record:
-  - tutorial for my setup: https://www.strato.de/faq/hosting/so-einfach-richten-sie-dyndns-fuer-ihre-domains-ein/ 
-  - otherwise what to do is set domain to dynDns instead of A record. then you need to configure your router to connect your server with the service.
-  - For my setup local access was blocked, because of ipv6 dyndns support interfering with DNS-Rebind protection and quick fix is to not implement <ip6addr>
-
-### further improvements
-- set automatic updates as found in the nextcloud-aio Docs
-- Backup: set up a proper SSD with ext4-fileformat and automounting via /etc/fstab. Then configure borg-backup.
-- Email-Server: configured it with my mail account wich was provided with the domain by strato. Good for resetting your password!
-- Phone-Sync: Contacts, Calendar, Task-list work alright with Davx5 and Tasks, which i got for free from F-Droid.
-
-- Bonus: get rid of all warnings in your nc-settings.
-
-### be careful with:
-- optional NC containers which like to use ports, like to interfere and lead to random bugs.
-- saving all your passwords well. I'm still with keepass on usb since 12 year old for all the rudimentary.
-
-### still working on
-- resolve occasional certificate-issues when trying to access from the local net. Solvable with PiHole or BIND?
-- FTP-compatability: nextcloud-aio does not support connecting via ftp. but my security camera can only transfer to ftp. i need a secondary ftp-instance. which i can access from both nextcloud and the camera...
-
-### Useful commands:
-#### AIO interface/borg password
-`sudo docker exec nextcloud-aio-mastercontainer grep password /mnt/docker-aio-config/data/configuration.json`
-
-## additional improvements
-- add cronjobs for automatic firmware-updates.
-
-## Sources:
-- https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README
-- https://github.com/lmarquar/Nextcloud_on_Raspi_commands
-- 
