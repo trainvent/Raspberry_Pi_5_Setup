@@ -1,32 +1,33 @@
-# Raspberry_Pi_5_Setup
+# Raspberry Pi 5 Setup
 
-this is what i need to get my current config running. It's based on [RaspberryPi5+NVMe Base Projekt](https://www.etsy.com/de-en/listing/1732482582/).
+## 🇬🇧 English
 
-## Os:
-- PiOs Lite Download with SSH enabled. Continue once you can acess with SSH from your pc.
+This repository documents our custom Raspberry Pi 5 setup.
 
-## Highsideswitch-fan:
-this chapter shows how to connect a PWM-Fan in a way that it shuts off at night and throttles automatically. Not a must, just convenient if you have it in your sleeping room!
-### Parts:
-c557b, bc547b, 2 1kΩ-resistors, GeekPi LED-Fan
-### circuit:
-<img width="440" height="440" alt="circuit_highswitch_raspi" src="https://github.com/user-attachments/assets/217775b8-8e54-4855-8acf-130e73c56989" />
+### Buy the case
 
-### define the pins:
-to create the on-off switch append to end of `/boot/firmware/config.txt`
-```
-dtoverlay=gpio-fan  
-dtoverlay=gpio-led,gpio=14,label=fan_state  
-```
+- **Trainvent shop:** [Raspberry Pi 5 Case](https://trainvent.com/shop/raspberry-pi-5-case/)
+- **Etsy:** [Raspberry Pi 5 + NVMe Base project](https://www.etsy.com/de-en/listing/1732482582/)
 
-### configure on-off times:
-we access cronjob with
-`sudo crontab -e`
-then paste
-```
-@reboot echo 1 > /sys/class/leds/fan_state/brightness  
-0 6 * * * echo 1 > /sys/class/leds/fan_state/brightness  
-0 22 * * * echo 0 > /sys/class/leds/fan_state/brightness  
-```
-Now you can sleep peacefully, even if you have a Raspberry-Server next to you :-).
+Start by installing Raspberry Pi OS Lite with SSH enabled. Continue once you can access the Pi via SSH from your computer.
 
+### Guides
+
+- [Case build guide](case/Instructions.md)
+- [Fan-control guide](fan/Instructions.md)
+
+## 🇩🇪 Deutsch
+
+Dieses Repository dokumentiert unser individuelles Raspberry-Pi-5-Setup.
+
+### Gehäuse kaufen
+
+- **Trainvent-Shop:** [Raspberry Pi 5 Case](https://trainvent.com/shop/raspberry-pi-5-case/)
+- **Etsy:** [Raspberry Pi 5 + NVMe Base Projekt](https://www.etsy.com/de-en/listing/1732482582/)
+
+Installiere zunächst Raspberry Pi OS Lite mit aktiviertem SSH. Fahre fort, sobald du über SSH von deinem Computer auf den Pi zugreifen kannst.
+
+### Anleitungen
+
+- [Bauanleitung für das Gehäuse](case/Bauanleitung.md)
+- [Anleitung zur Lüftersteuerung](fan/Bauanleitung.md)

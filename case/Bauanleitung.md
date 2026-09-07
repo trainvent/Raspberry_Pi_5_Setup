@@ -23,6 +23,6 @@
 > [!Note]
 >Die Gummifüße der NVMe-Base können beim Zusammenbau drangelassen werden.
 ## Verweise
-- Tutorial für optimale Lüftersteuerung hier zu finden: https://github.com/Trainvent/Raspberry_Pi_5_Setup
+- Tutorial für optimale Lüftersteuerung hier zu finden: https://github.com/trainvent/Raspberry_Pi_5_Setup
 
 PS.: Die Case wurde von der Raspberry Pi 4 Version von @TheDIYLifeCo inspiriert.

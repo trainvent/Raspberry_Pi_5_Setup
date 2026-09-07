@@ -31,6 +31,6 @@
 > The rubber feet of the NVMe base can remain attached during assembly.
 
 ## References
-- Tutorial for optimal fan control can be found here: [https://github.com/Trainvent/Raspberry_Pi_5_Setup](https://github.com/Trainvent/Raspberry_Pi_5_Setup)
+- Tutorial for optimal fan control can be found here: [https://github.com/trainvent/Raspberry_Pi_5_Setup](https://github.com/trainvent/Raspberry_Pi_5_Setup)
 
 PS: The case was inspired by the Raspberry Pi 4 version by @TheDIYLifeCo.
