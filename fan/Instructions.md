@@ -4,7 +4,7 @@ This guide explains how to connect a PWM fan so its LEDs can be switched off and
 
 ## Parts
 
-- C557B transistor
+- BC557B transistor
 - BC547B transistor
 - Two 1 kΩ resistors
 - GeekPi LED fan

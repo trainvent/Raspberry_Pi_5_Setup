@@ -4,7 +4,7 @@ Diese Anleitung erklärt, wie ein PWM-Lüfter angeschlossen wird, sodass sich se
 
 ## Materialien
 
-- C557B-Transistor
+- BC557B-Transistor
 - BC547B-Transistor
 - Zwei 1-kΩ-Widerstände
 - GeekPi-LED-Lüfter

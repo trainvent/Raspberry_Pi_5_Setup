@@ -13,8 +13,10 @@ Start by installing Raspberry Pi OS Lite with SSH enabled. Continue once you can
 
 ### Guides
 
-- [Case build guide](case/Instructions.md)
-- [Fan-control guide](fan/Instructions.md)
+Full documentation: **[docs.trainvent.com](https://docs.trainvent.com/raspberry-pi/pi-5-case)**
+
+- [Case build guide](https://docs.trainvent.com/raspberry-pi/pi-5-case/build-guide)
+- [Fan-control guide](https://docs.trainvent.com/raspberry-pi/pi-5-case/fan-control)
 
 ## 🇩🇪 Deutsch
 
@@ -29,5 +31,7 @@ Installiere zunächst Raspberry Pi OS Lite mit aktiviertem SSH. Fahre fort, soba
 
 ### Anleitungen
 
-- [Bauanleitung für das Gehäuse](case/Bauanleitung.md)
-- [Anleitung zur Lüftersteuerung](fan/Bauanleitung.md)
+Vollständige Dokumentation: **[docs.trainvent.com](https://docs.trainvent.com/de/raspberry-pi/pi-5-case)**
+
+- [Bauanleitung für das Gehäuse](https://docs.trainvent.com/de/raspberry-pi/pi-5-case/build-guide)
+- [Anleitung zur Lüftersteuerung](https://docs.trainvent.com/de/raspberry-pi/pi-5-case/fan-control)
